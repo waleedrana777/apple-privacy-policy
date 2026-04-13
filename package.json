@@ -1,0 +1,12 @@
+{
+  "name": "apple-privacy-policy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Hosted privacy policy for App Store (GitHub Pages)",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "marked": "^15.0.0"
+  }
+}
