@@ -175,3 +175,27 @@ We aim to respond to all privacy-related inquiries within 30 days.
 ---
 
 *This policy is published on GitHub and version-controlled. You can review the full history of changes via the repository's commit log.*
+
+---
+
+## 14. Per-App Disclosures
+
+The sections below disclose the specific practices of each App we publish. Where a per-app section conflicts with the general sections above, the per-app section controls for that App.
+
+### The Slight Edge (iOS & watchOS)
+
+**Category:** Fully Local (No Data Collected)
+
+- **Data collection:** None. The Slight Edge does not collect, transmit, or share any personal data. It does not use analytics, crash reporting, advertising, or tracking SDKs.
+- **On-device storage:** All app state — daily micro-movements (edge readings), streak counts, mitigation history, boredom-timer sessions, and the daily goal setting — is stored locally on your device using Apple's on-device persistence (UserDefaults). This data never leaves your device.
+- **AI / LLM features:** None. This App does not use Artificial Intelligence or Large Language Models, on-device or in the cloud.
+- **Accounts:** None. This App does not require or offer account creation or sign-in.
+- **Network access:** None. This App operates entirely offline. It does not make any network requests.
+- **Third-party services:** None.
+- **Apple Health / sensor access:** None.
+- **Data deletion:** All data is deleted permanently when you remove the App from your device.
+- **App Store Privacy Nutrition Label:** No Data Collected.
+
+---
+
+*End of per-app disclosures. Additional Apps will be listed in this section as they are published.*
