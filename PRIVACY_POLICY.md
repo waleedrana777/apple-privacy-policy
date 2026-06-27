@@ -182,7 +182,7 @@ We aim to respond to all privacy-related inquiries within 30 days.
 
 The sections below disclose the specific practices of each App we publish. Where a per-app section conflicts with the general sections above, the per-app section controls for that App.
 
-### The Slight Edge (iOS & watchOS)
+### Mini Spirals (iOS & watchOS)
 
 **Category:** Fully Local (No Data Collected)
 
