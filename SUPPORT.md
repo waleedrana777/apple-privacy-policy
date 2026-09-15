@@ -1,9 +1,7 @@
-# Support
+# Notebook / Vanszbook — Support
 
-Support for all apps published by the developer.
+Mac App Store **Support URL:** [https://github.com/streetmandev](https://github.com/streetmandev)
 
-For help, questions, bug reports, or feature requests, email:
+That GitHub account is for support only. Email still: [waleedrana777@gmail.com](mailto:waleedrana777@gmail.com)
 
-**waleedrana700@gmail.com**
-
-Please include the app name, your device model, and OS version so we can help faster.
+Privacy policy: [https://waleedrana777.github.io/apple-privacy-policy/](https://waleedrana777.github.io/apple-privacy-policy/)

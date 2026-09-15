@@ -184,18 +184,29 @@ The sections below disclose the specific practices of each App we publish. Where
 
 ### Mini Spirals (iOS & watchOS)
 
-**Category:** Fully Local (No Data Collected)
+Category: Fully Local (No Data Collected)
 
-- **Data collection:** None. The Slight Edge does not collect, transmit, or share any personal data. It does not use analytics, crash reporting, advertising, or tracking SDKs.
-- **On-device storage:** All app state — daily micro-movements (edge readings), streak counts, mitigation history, boredom-timer sessions, and the daily goal setting — is stored locally on your device using Apple's on-device persistence (UserDefaults). This data never leaves your device.
-- **AI / LLM features:** None. This App does not use Artificial Intelligence or Large Language Models, on-device or in the cloud.
-- **Accounts:** None. This App does not require or offer account creation or sign-in.
-- **Network access:** None. This App operates entirely offline. It does not make any network requests.
-- **Third-party services:** None.
-- **Apple Health / sensor access:** None.
-- **Data deletion:** All data is deleted permanently when you remove the App from your device.
-- **App Store Privacy Nutrition Label:** No Data Collected.
+- Data collection: None. Mini Spirals does not collect, transmit, or share any personal data. It does not use analytics, crash reporting, advertising, or tracking SDKs.
+- On-device storage: All app state is stored locally on your device. This data never leaves your device.
+- AI / LLM features: None.
+- Accounts: None.
+- Network access: None. This App operates entirely offline.
+- Third-party services: None.
+- Data deletion: All data is deleted permanently when you remove the App from your device.
+- App Store Privacy Nutrition Label: No Data Collected.
 
----
+### Notebook (macOS) — also listed as Vanszbook
 
-*End of per-app disclosures. Additional Apps will be listed in this section as they are published.*
+Bundle ID: `com.wapps.vanszbook`  
+Category: Hybrid (local-first notes; optional account and optional AI)
+
+- Notes, images, drafts, and preferences are stored on your Mac. They are not uploaded for sync or published to a feed.
+- No advertising, no tracking SDKs, no analytics products. The App does not use your notes to advertise to you.
+- Optional account (Apple, Google, or email) is provided by Supabase Auth. If you create an account, we process your email address and a user ID so you can sign in and, if you choose, use AI features. Sign in with Apple or Google is also subject to Apple’s or Google’s own privacy policy.
+- Optional AI features (margin lines, chat, and similar companionship): the text you submit for that feature is sent through a Supabase edge function to an AI provider (currently Groq and/or OpenRouter / DeepSeek) solely to generate a reply for you. API keys are not stored in the App. Note text is not sent to an AI provider unless you use those features.
+- If you use signed-in AI / mirror features, related conversation or signature records may be stored on the server with your account. Deleting the account removes that server-side data.
+- Optional voice dictation uses the microphone. Speech is processed on-device when the system speech recognizer is available. If a Deepgram key is configured, audio may be sent to Deepgram only while dictation is running.
+- Account deletion is available in Settings. It deletes the server account and its server-side data, and clears this App’s local notes on that Mac.
+- You can export a local JSON backup of your notes from Settings. You can also delete individual notes or remove the App, which deletes on-device data on that Mac.
+- Contact for privacy requests: waleedrana777@gmail.com
+

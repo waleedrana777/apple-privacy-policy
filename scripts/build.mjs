@@ -7,16 +7,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const dist = path.join(root, "dist");
 
-const md = fs.readFileSync(path.join(root, "PRIVACY_POLICY.md"), "utf8");
-const body = marked.parse(md, { mangle: false, headerIds: true });
-
-const html = `<!DOCTYPE html>
+function page(title, description, bodyHtml) {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — App Store Apps</title>
-  <meta name="description" content="Privacy policy for mobile apps published on the Apple App Store." />
+  <title>${title}</title>
+  <meta name="description" content="${description}" />
   <style>
     :root {
       --bg: #0f1419;
@@ -110,21 +108,37 @@ const html = `<!DOCTYPE html>
 <body>
   <div class="wrap">
     <header>
-      <h1>Privacy Policy</h1>
+      <h1>${title}</h1>
       <p>Apps published on the Apple App Store · <a href="https://github.com/waleedrana777/apple-privacy-policy">Source on GitHub</a></p>
     </header>
     <article class="prose">
-${body}
+${bodyHtml}
     </article>
     <footer>
-      Plain text: <a href="./PRIVACY_POLICY.md">PRIVACY_POLICY.md</a>
+      <a href="./">Privacy policy</a>
+      · <a href="./support.html">Support</a>
+      · <a href="./PRIVACY_POLICY.md">PRIVACY_POLICY.md</a>
     </footer>
   </div>
 </body>
 </html>
 `;
+}
+
+const md = fs.readFileSync(path.join(root, "PRIVACY_POLICY.md"), "utf8");
+const supportMd = fs.readFileSync(path.join(root, "SUPPORT.md"), "utf8");
+const body = marked.parse(md, { mangle: false, headerIds: true });
+const supportBody = marked.parse(supportMd, { mangle: false, headerIds: true });
 
 fs.mkdirSync(dist, { recursive: true });
-fs.writeFileSync(path.join(dist, "index.html"), html);
+fs.writeFileSync(
+  path.join(dist, "index.html"),
+  page("Privacy Policy", "Privacy policy for apps published on the Apple App Store.", body),
+);
+fs.writeFileSync(
+  path.join(dist, "support.html"),
+  page("Support — Notebook", "Support contact for Notebook / Vanszbook on the Mac App Store.", supportBody),
+);
 fs.copyFileSync(path.join(root, "PRIVACY_POLICY.md"), path.join(dist, "PRIVACY_POLICY.md"));
-console.log("Built dist/index.html and dist/PRIVACY_POLICY.md");
+fs.copyFileSync(path.join(root, "SUPPORT.md"), path.join(dist, "SUPPORT.md"));
+console.log("Built dist/index.html, dist/support.html, and markdown copies");
