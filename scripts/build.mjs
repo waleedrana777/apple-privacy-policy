@@ -142,3 +142,4 @@ fs.writeFileSync(
 fs.copyFileSync(path.join(root, "PRIVACY_POLICY.md"), path.join(dist, "PRIVACY_POLICY.md"));
 fs.copyFileSync(path.join(root, "SUPPORT.md"), path.join(dist, "SUPPORT.md"));
 console.log("Built dist/index.html, dist/support.html, and markdown copies");
+if (fs.existsSync(path.join(root, "pinacoteca"))) fs.cpSync(path.join(root, "pinacoteca"), path.join(dist, "pinacoteca"), { recursive: true });
